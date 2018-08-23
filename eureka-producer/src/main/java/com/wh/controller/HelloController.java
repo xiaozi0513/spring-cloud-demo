@@ -17,7 +17,27 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String hello(@RequestParam("name") String name) {
+//        try {
+//            Thread.sleep(2000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        int a = 1/0;
         return "hello, " + name + " - " + new Date();
+    }
+
+    @RequestMapping("/age")
+    public Integer timeout(@RequestParam("age") Integer age) {
+        if (age < 10) {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        } else if (age < 20) {
+            int a = 1 / 0;
+        }
+        return age;
     }
 
 }

@@ -13,6 +13,9 @@
         <module>eureka-server</module>
         <module>eureka-producer</module>
         <module>eureka-consumer</module>
+        <module>eureka-consumer-hystrix</module>
+        <module>hystrix-dashboard</module>
+        <module>turbine</module>
     </modules>
 
     <parent>
