@@ -29,9 +29,9 @@ public class HelloController {
     }
 
     @RequestMapping("/hystrix")
-    public void hystrix() {
-        for(int i=0; i<50; i++){
-            helloRemote.getAge(12);
+    public void hystrix(@RequestParam("age") Integer age) {
+        for (int i = 0; i < 50; i++) {
+            helloRemote.getAge(age);
         }
     }
 

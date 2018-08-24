@@ -19,3 +19,19 @@ eureka:
 feign:
   hystrix:
     enabled: true
+
+ribbon:
+  ReadTimeout: 500
+  ConnectTimeout: 500
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1500

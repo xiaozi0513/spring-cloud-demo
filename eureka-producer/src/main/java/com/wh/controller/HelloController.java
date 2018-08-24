@@ -30,10 +30,11 @@ public class HelloController {
     public Integer timeout(@RequestParam("age") Integer age) {
         if (age < 10) {
             try {
-                Thread.sleep(2000);
+                Thread.sleep(1100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            System.out.println("====================");
         } else if (age < 20) {
             int a = 1 / 0;
         }
