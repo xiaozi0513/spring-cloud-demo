@@ -16,6 +16,7 @@
         <module>eureka-consumer-hystrix</module>
         <module>hystrix-dashboard</module>
         <module>turbine</module>
+        <module>config-server-git</module>
     </modules>
 
     <parent>
