@@ -1,0 +1,12 @@
+server:
+  port: 12000
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xiaozi0513/spring-cloud-demo
+          search-paths: config-repo
