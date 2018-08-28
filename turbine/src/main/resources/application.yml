@@ -7,13 +7,17 @@ server:
 
 management:
   port: 8089
+  web:
+    base-path: /
 
 eureka:
   client:
     service-url:
-      defaultZone: http://peer1:8761/eureka
+      defaultZone: http://10.120.66.36:8080/eureka
 
 turbine:
-  app-config: eureka-consumer-hystrix
+  app-config: as-xm-stag
   cluster-name-expression: new String("default")
   combine-host-port: true
+  instanceUrlSuffix: hystrix.stream
+

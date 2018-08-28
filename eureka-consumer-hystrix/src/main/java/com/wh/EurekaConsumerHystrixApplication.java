@@ -1,5 +1,7 @@
 package com.wh;
 
+import com.netflix.hystrix.strategy.HystrixPlugins;
+import com.wh.landing.HystrixMetricsPublisherImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
@@ -17,6 +19,10 @@ public class EurekaConsumerHystrixApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(EurekaConsumerHystrixApplication.class, args);
+    }
+
+    static {
+        HystrixPlugins.getInstance().registerMetricsPublisher(new HystrixMetricsPublisherImpl());
     }
 
 }
