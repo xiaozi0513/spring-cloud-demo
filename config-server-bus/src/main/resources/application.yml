@@ -10,10 +10,8 @@ spring:
         git:
           uri: https://github.com/xiaozi0513/spring-cloud-demo
           search-paths: config-repo
-    stream:
-      kafka:
-        binder:
-          brokers: localhost:9092
+    bus:
+      enabled: true
 
 management:
   endpoints:
