@@ -1,0 +1,29 @@
+server:
+  port: 18000
+
+spring:
+  application:
+    name: config-server-bus
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xiaozi0513/spring-cloud-demo
+          search-paths: config-repo
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, bus-refresh
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
+
+
