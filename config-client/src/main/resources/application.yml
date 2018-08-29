@@ -1,5 +1,5 @@
 server:
-  port: 12001
+  port: 12100
 
 spring:
   application:
@@ -9,4 +9,5 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh
+        include: health, refresh
+
