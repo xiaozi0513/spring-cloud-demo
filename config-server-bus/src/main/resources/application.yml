@@ -12,6 +12,8 @@ spring:
           search-paths: config-repo
     bus:
       enabled: true
+      trace:
+        enabled: true
 
 management:
   endpoints:
